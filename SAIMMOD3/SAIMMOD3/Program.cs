@@ -6,7 +6,7 @@ var lambda = 0.5;
 
 var isQueueBusy = false;
 
-var states = new Dictionary<string, int>()
+var states = new Dictionary<string, double>()
 {
     { "2000", 1 },
     { "1000", 0 },
@@ -33,13 +33,13 @@ for (var i = 0; i < tactsCount; i++)
     proc1 = true;
     proc2 = true;
 
-        request = source.Tact();
+    request = source.Tact();
 
-        if(!channel1.IsBusy && request)
-        {
-            channel1.IsBusy = true;
+    if(!channel1.IsBusy && request)
+    {
+        channel1.IsBusy = true;
         proc1 = false;
-        }
+    }
 
         if (proc1)
             request = channel1.Tact1(request);
@@ -54,15 +54,23 @@ for (var i = 0; i < tactsCount; i++)
             proc2 = false;
         }
 
-        if(proc2)
-            channel2.Tact2(isQueueBusy);
+     if(proc2)
+        channel2.Tact2(isQueueBusy);
 
-        if(!channel2.IsBusy)
-            isQueueBusy = false;
+    if(!channel2.IsBusy && isQueueBusy)//
+    {    
+        isQueueBusy = false;
+        channel2.IsBusy = true;
+    }
 
-        states[$"{source.TactsToBid}{Convert.ToInt32(channel1.IsBusy)}{Convert.ToInt32(isQueueBusy)}{Convert.ToInt32(channel2.IsBusy)}"] += 1;
+    states[$"{source.TactsToBid}{Convert.ToInt32(channel1.IsBusy)}{Convert.ToInt32(isQueueBusy)}{Convert.ToInt32(channel2.IsBusy)}"] += 1;
+    var w = $"{source.TactsToBid}{Convert.ToInt32(channel1.IsBusy)}{Convert.ToInt32(isQueueBusy)}{Convert.ToInt32(channel2.IsBusy)}";
+    if (w == "2111")
+    {
+        var ww = 3;
+    }
     p = $"{source.TactsToBid}{Convert.ToInt32(channel1.IsBusy)}{Convert.ToInt32(isQueueBusy)}{Convert.ToInt32(channel2.IsBusy)}";
 }
 
 foreach (var state in states)
-    Console.WriteLine($"{state.Key}  {(double)state.Value/(double)tactsCount}");
+    Console.WriteLine($"{state.Key}  {state.Value/tactsCount}");
