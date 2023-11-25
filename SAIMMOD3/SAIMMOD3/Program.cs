@@ -24,28 +24,44 @@ var source = new Source();
 var channel1 = new Channel(0.5);
 var channel2 = new Channel(0.5);
 var request = false;
+var proc1 = true;
+var proc2 = true;
+var p = "";
 
 for (var i = 0; i < tactsCount; i++)
 {
-    try
-    {
+    proc1 = true;
+    proc2 = true;
+
         request = source.Tact();
 
-        request = channel1.Tact(request);
+        if(!channel1.IsBusy && request)
+        {
+            channel1.IsBusy = true;
+        proc1 = false;
+        }
 
-        isQueueBusy = isQueueBusy ? true : request ? true : false;
+        if (proc1)
+            request = channel1.Tact1(request);
 
-        if (!channel2.IsBusy)
+        if(proc1)
+            isQueueBusy = isQueueBusy || request;
+
+        if(!channel2.IsBusy && isQueueBusy)
+        {
+            isQueueBusy = false;
+            channel2.IsBusy = true;
+            proc2 = false;
+        }
+
+        if(proc2)
+            channel2.Tact2(isQueueBusy);
+
+        if(!channel2.IsBusy)
             isQueueBusy = false;
 
-        channel2.Tact(request);
-
         states[$"{source.TactsToBid}{Convert.ToInt32(channel1.IsBusy)}{Convert.ToInt32(isQueueBusy)}{Convert.ToInt32(channel2.IsBusy)}"] += 1;
-    }
-    catch
-    {
-        continue;
-    }
+    p = $"{source.TactsToBid}{Convert.ToInt32(channel1.IsBusy)}{Convert.ToInt32(isQueueBusy)}{Convert.ToInt32(channel2.IsBusy)}";
 }
 
 foreach (var state in states)

@@ -19,7 +19,7 @@ namespace SAIMMOD3
         }
 
         // возвращает заявку или нет
-        public bool Tact(bool request)
+        public bool Tact1(bool request)
         {
             if (rand.NextDouble() <= failure)
             {
@@ -33,16 +33,28 @@ namespace SAIMMOD3
                 IsBusy = false;
                 return true;
             }
-            throw new Exception("TACT SOURCE EX");
+            throw new Exception("Tact case not found!");
         }
-/*
-        public bool Tact(bool request)
+
+        public bool Tact2(bool request)
         {
             if (rand.NextDouble() <= failure)
             {
                 IsBusy = IsBusy || request;
                 return false;
             }
-        }*/
+            if (!IsBusy || IsBusy && request)
+            {
+                IsBusy = false;
+                return request;
+            }
+                
+            if (IsBusy && !request)
+            {
+                IsBusy = false;
+                return true;
+            }
+            throw new Exception("Tact case not found!");
+        }
     }
 }
