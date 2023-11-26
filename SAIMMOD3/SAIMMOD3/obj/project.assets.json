@@ -1,38 +1,36 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net7.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Max\\.nuget\\packages\\": {}
+    "/Users/maksimmihalcov/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ATHIS.PROJECT\\SMMOD\\SAIMMOD3\\SAIMMOD3\\SAIMMOD3.csproj",
+      "projectUniqueName": "/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/SAIMMOD3.csproj",
       "projectName": "SAIMMOD3",
-      "projectPath": "D:\\ATHIS.PROJECT\\SMMOD\\SAIMMOD3\\SAIMMOD3\\SAIMMOD3.csproj",
-      "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
-      "outputPath": "D:\\ATHIS.PROJECT\\SMMOD\\SAIMMOD3\\SAIMMOD3\\obj\\",
+      "projectPath": "/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/SAIMMOD3.csproj",
+      "packagesPath": "/Users/maksimmihalcov/.nuget/packages/",
+      "outputPath": "/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Max\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/maksimmihalcov/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {}
         }
       },
@@ -43,15 +41,16 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "imports": [
           "net461",
           "net462",
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/maksimmihalcov/.dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
       }
     }
   }

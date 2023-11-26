@@ -1,0 +1,15 @@
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/bin/Debug/net7.0/SAIMMOD3
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/bin/Debug/net7.0/SAIMMOD3.deps.json
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/bin/Debug/net7.0/SAIMMOD3.runtimeconfig.json
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/bin/Debug/net7.0/SAIMMOD3.dll
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/bin/Debug/net7.0/SAIMMOD3.pdb
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/obj/Debug/net7.0/SAIMMOD3.csproj.AssemblyReference.cache
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/obj/Debug/net7.0/SAIMMOD3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/obj/Debug/net7.0/SAIMMOD3.AssemblyInfoInputs.cache
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/obj/Debug/net7.0/SAIMMOD3.AssemblyInfo.cs
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/obj/Debug/net7.0/SAIMMOD3.csproj.CoreCompileInputs.cache
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/obj/Debug/net7.0/SAIMMOD3.dll
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/obj/Debug/net7.0/refint/SAIMMOD3.dll
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/obj/Debug/net7.0/SAIMMOD3.pdb
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/obj/Debug/net7.0/SAIMMOD3.genruntimeconfig.cache
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/SAIMMOD3/SAIMMOD3/obj/Debug/net7.0/ref/SAIMMOD3.dll
