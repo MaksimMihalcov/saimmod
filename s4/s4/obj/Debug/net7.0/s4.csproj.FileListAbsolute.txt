@@ -1,0 +1,15 @@
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/bin/Debug/net7.0/s4
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/bin/Debug/net7.0/s4.deps.json
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/bin/Debug/net7.0/s4.runtimeconfig.json
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/bin/Debug/net7.0/s4.dll
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/bin/Debug/net7.0/s4.pdb
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/obj/Debug/net7.0/s4.csproj.AssemblyReference.cache
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/obj/Debug/net7.0/s4.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/obj/Debug/net7.0/s4.AssemblyInfoInputs.cache
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/obj/Debug/net7.0/s4.AssemblyInfo.cs
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/obj/Debug/net7.0/s4.csproj.CoreCompileInputs.cache
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/obj/Debug/net7.0/s4.dll
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/obj/Debug/net7.0/refint/s4.dll
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/obj/Debug/net7.0/s4.pdb
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/obj/Debug/net7.0/s4.genruntimeconfig.cache
+/Users/maksimmihalcov/Documents/SAIMMOD/saimmod/s4/s4/obj/Debug/net7.0/ref/s4.dll
