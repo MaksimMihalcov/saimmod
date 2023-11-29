@@ -1,15 +1,14 @@
 ﻿class Program
 {
     static Dictionary<int, int> States = new Dictionary<int, int>();
-
+    static double lambda = 2.0;
+    static double mu = 2.25;
+    //double p = 0.1;
+    
     static void Main(string[] args)
     {
-        var lambda = 2.0;
-        var mu = 2.25;
-        var p = 0.1;
-
         var queueLength = 0;
-        var workingTime = DateTime.Now.AddSeconds(10);
+        var workingTime = DateTime.Now.AddSeconds(17);
         long totalCount = 0;
 
         DateTime processingTime = DateTime.Now;
@@ -17,47 +16,54 @@
         
         while (DateTime.Now < workingTime)
         {
-            if (processingTime < DateTime.Now)
+            if (DateTime.Now > timeBeforeAppearance)
             {
-                if (queueLength > 0)
-                {
-                    queueLength--;
-                    AddOrUpdateState(queueLength + 1);
-                    totalCount++;
-                    if (queueLength == 0)
-                        timeBeforeAppearance = ExponentialDistribution(lambda);
-                    processingTime = ExponentialDistribution(mu);
-                }
-                else
-                {
-                    if (timeBeforeAppearance < DateTime.Now)
-                    {
-                        AddOrUpdateState(0);
-                        totalCount++;
-                    }
-                    else
-                    {
-                        AddOrUpdateState(1);
-                        totalCount++;
-                        processingTime = ExponentialDistribution(mu);
-                        timeBeforeAppearance = ExponentialDistribution(lambda);
-                    }
-                }
+                 if (DateTime.Now > processingTime)
+                 {
+                     if (queueLength > 0)
+                     {
+                         AddOrUpdateState(queueLength + 1);
+                         totalCount++;
+                         processingTime = ExponentialDistribution(mu);
+                         timeBeforeAppearance = ExponentialDistribution(lambda);
+                         continue;
+                     }
+                     AddOrUpdateState(1);
+                     totalCount++;
+                     processingTime = ExponentialDistribution(mu);
+                     timeBeforeAppearance = ExponentialDistribution(lambda);
+                     continue;
+                 }
+                 else
+                 {
+                     queueLength++;
+                     AddOrUpdateState(queueLength + 1);
+                     timeBeforeAppearance = ExponentialDistribution(lambda);
+                     continue;
+                 }
             }
             else
             {
-                if (timeBeforeAppearance < DateTime.Now)
-                {
-                    AddOrUpdateState(queueLength + 1);
-                    totalCount++;
-                }
-                else
-                {
-                    queueLength++;
-                    AddOrUpdateState(queueLength + 1);
-                    totalCount++;
-                    timeBeforeAppearance = ExponentialDistribution(lambda);
-                }
+                 if (DateTime.Now > processingTime)
+                 {
+                     if (queueLength > 0)
+                     {
+                         queueLength--;
+                         AddOrUpdateState(queueLength + 1);
+                         totalCount++;
+                         processingTime = ExponentialDistribution(mu);
+                     }
+                     else
+                     {
+                         AddOrUpdateState(0);
+                         totalCount++;
+                     }
+                 }
+                 else
+                 {
+                     AddOrUpdateState(1);
+                     totalCount++;
+                 }
             }
             //timeBeforeAppearance = DateTime.Now.AddSeconds(ExponentialDistribution(lambda));
             // if (DateTime.Now >= timeBeforeAppearance)
