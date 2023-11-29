@@ -48,7 +48,6 @@ namespace SAIMMOD3
                 IsBusy = false;
                 return request;
             }
-                
             if (IsBusy && !request)
             {
                 IsBusy = false;

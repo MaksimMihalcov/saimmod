@@ -18,8 +18,8 @@ var states = new Dictionary<string, double>()
 var source = new Source();
 var p1 = 0.5;
 var p2 = 0.5;
-var channel1 = new Channel(0.5);
-var channel2 = new Channel(0.5);
+var channel1 = new Channel(p1);
+var channel2 = new Channel(p2);
 
 var request = false;
 var isQueueBusy = false;
