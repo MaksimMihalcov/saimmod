@@ -1,17 +1,15 @@
-﻿using System.Diagnostics;
-
-class Program
+﻿class Program
 {
     static Dictionary<int, int> States = new Dictionary<int, int>();
 
     static void Main(string[] args)
     {
         var lambda = 2.0;
-        var mu = 2.5;
+        var mu = 2.25;
         var p = 0.1;
 
         var queueLength = 0;
-        var workingTime = DateTime.Now.AddSeconds(30);
+        var workingTime = DateTime.Now.AddSeconds(10);
         long totalCount = 0;
 
         DateTime processingTime = DateTime.Now;
@@ -96,15 +94,18 @@ class Program
             // totalCount++;
         }
 
+        var count = 0;
         foreach (var state in States)
         {
+            if (count == 20) break;
             Console.WriteLine($"S{state.Key}: " + (double)state.Value/(double)totalCount);
+            count++;
         }
 
         var ro = lambda / mu;
         var Loch = ro * ro / (1 - ro);
-        var Toch = ro * ro / lambda * (1 - ro);
-        var Ts = ro / lambda * (1 - ro);
+        var Toch = ro * ro / (lambda * (1 - ro));
+        var Ts = ro / (lambda * (1 - ro));
         
         Console.WriteLine("Loch " + Loch);
         Console.WriteLine("Toch " + Toch);
