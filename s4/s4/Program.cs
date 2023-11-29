@@ -53,6 +53,15 @@
         {
             Console.WriteLine($"S{state.Key}: " + (double)state.Value/(double)totalCount);
         }
+
+        var ro = lambda / mu;
+        var Loch = ro * ro / (1 - ro);
+        var Toch = ro * ro / lambda * (1 - ro);
+        var Ts = ro / lambda * (1 - ro);
+        
+        Console.WriteLine("Loch " + Loch);
+        Console.WriteLine("Toch " + Toch);
+        Console.WriteLine("Ts " + Ts);
     }
     
     static double ExponentialDistribution(double val)
